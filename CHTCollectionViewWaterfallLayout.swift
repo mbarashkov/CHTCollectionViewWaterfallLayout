@@ -204,7 +204,7 @@ public class CHTCollectionViewWaterfallLayout: UICollectionViewLayout {
             let width = self.collectionView!.bounds.size.width - sectionInsets.left - sectionInsets.right
             let columnCount = self.columnCountForSection(section)
             let spaceColumCount = CGFloat(columnCount - 1)
-            let itemWidth = floor((width - (spaceColumCount * self.minimumColumnSpacing)) / CGFloat(columnCount))
+            let itemWidth = (width - (spaceColumCount * self.minimumColumnSpacing)) / CGFloat(columnCount)
 
             /*
              * 2. Section header
